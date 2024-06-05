@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-zr0v+_^rnqvk(0t8))7d7l%0)hiipx6d9(7a$q+_84f(ex*zs$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['theludo.onrender.com']
 
 
 # Application definition
