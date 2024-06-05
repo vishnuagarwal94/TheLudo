@@ -1,0 +1,1503 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta property="og:title" content="RKLUDO - Win Real Cash">
+    <meta property="og:description" content="RKLUDO - Win Real Cash">
+    <meta property="og:image" content="https://rkludo.net/public/icon/1694008309452-1-689541714.webp">
+    <meta property="og:url" content="https://rkludo.net/">
+    <meta property="og:type" content="website">
+    <link rel="manifest" href="/manifest.json">
+    <title>RK Ludo - Win Real Cash</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.16/tinymce.min.js" integrity="sha256-DwA/5XvQk7JerRG73GsRcEUM+ESubaliT2xRpDtIKNA=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&amp;display=swap" rel="stylesheet">
+    <script>
+        "serviceWorker" in navigator && window.addEventListener("load", (() => {
+            navigator.serviceWorker.register("/sw.js").then((e => {
+                console.log(`Service Worker registered! Scope: ${e.scope}`)
+            })).catch((e => {
+                console.log(`Service Worker registration failed: ${e}`)
+            }))
+        }))
+    </script>
+    <script defer="defer" src="/static/js/main.2b6592d5.js"></script>
+    <link href="/static/css/main.dd43cfe6.css" rel="stylesheet">
+    <style>
+        .swal2-popup.swal2-toast {
+            box-sizing: border-box;
+            grid-column: 1/4 !important;
+            grid-row: 1/4 !important;
+            grid-template-columns: min-content auto min-content;
+            padding: 1em;
+            overflow-y: hidden;
+            background: #fff;
+            box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
+            pointer-events: all
+        }
+        
+        .swal2-popup.swal2-toast>* {
+            grid-column: 2
+        }
+        
+        .swal2-popup.swal2-toast .swal2-title {
+            margin: .5em 1em;
+            padding: 0;
+            font-size: 1em;
+            text-align: initial
+        }
+        
+        .swal2-popup.swal2-toast .swal2-loading {
+            justify-content: center
+        }
+        
+        .swal2-popup.swal2-toast .swal2-input {
+            height: 2em;
+            margin: .5em;
+            font-size: 1em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-validation-message {
+            font-size: 1em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-footer {
+            margin: .5em 0 0;
+            padding: .5em 0 0;
+            font-size: .8em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-close {
+            grid-column: 3/3;
+            grid-row: 1/99;
+            align-self: center;
+            width: .8em;
+            height: .8em;
+            margin: 0;
+            font-size: 2em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-html-container {
+            margin: .5em 1em;
+            padding: 0;
+            overflow: initial;
+            font-size: 1em;
+            text-align: initial
+        }
+        
+        .swal2-popup.swal2-toast .swal2-html-container:empty {
+            padding: 0
+        }
+        
+        .swal2-popup.swal2-toast .swal2-loader {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            height: 2em;
+            margin: .25em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            min-width: 2em;
+            height: 2em;
+            margin: 0 .5em 0 0
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: bold
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            top: .875em;
+            width: 1.375em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: .3125em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: .3125em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-actions {
+            justify-content: flex-start;
+            height: auto;
+            margin: 0;
+            margin-top: .5em;
+            padding: 0 .5em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-styled {
+            margin: .25em .5em;
+            padding: .4em .6em;
+            font-size: 1em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success {
+            border-color: #a5dc86
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 1.6em;
+            height: 3em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -0.8em;
+            left: -0.5em;
+            transform: rotate(-45deg);
+            transform-origin: 2em 2em;
+            border-radius: 4em 0 0 4em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -0.25em;
+            left: .9375em;
+            transform-origin: 0 1.5em;
+            border-radius: 0 4em 4em 0
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+            top: 0;
+            left: .4375em;
+            width: .4375em;
+            height: 2.6875em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+            height: .3125em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 1.125em;
+            left: .1875em;
+            width: .75em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+            top: .9375em;
+            right: .1875em;
+            width: 1.375em
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+            animation: swal2-toast-animate-success-line-tip .75s
+        }
+        
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+            animation: swal2-toast-animate-success-line-long .75s
+        }
+        
+        .swal2-popup.swal2-toast.swal2-show {
+            animation: swal2-toast-show .5s
+        }
+        
+        .swal2-popup.swal2-toast.swal2-hide {
+            animation: swal2-toast-hide .1s forwards
+        }
+        
+        .swal2-container {
+            display: grid;
+            position: fixed;
+            z-index: 1060;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
+            grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+            height: 100%;
+            padding: .625em;
+            overflow-x: hidden;
+            transition: background-color .1s;
+            -webkit-overflow-scrolling: touch
+        }
+        
+        .swal2-container.swal2-backdrop-show,
+        .swal2-container.swal2-noanimation {
+            background: rgba(0, 0, 0, .4)
+        }
+        
+        .swal2-container.swal2-backdrop-hide {
+            background: rgba(0, 0, 0, 0) !important
+        }
+        
+        .swal2-container.swal2-top-start,
+        .swal2-container.swal2-center-start,
+        .swal2-container.swal2-bottom-start {
+            grid-template-columns: minmax(0, 1fr) auto auto
+        }
+        
+        .swal2-container.swal2-top,
+        .swal2-container.swal2-center,
+        .swal2-container.swal2-bottom {
+            grid-template-columns: auto minmax(0, 1fr) auto
+        }
+        
+        .swal2-container.swal2-top-end,
+        .swal2-container.swal2-center-end,
+        .swal2-container.swal2-bottom-end {
+            grid-template-columns: auto auto minmax(0, 1fr)
+        }
+        
+        .swal2-container.swal2-top-start>.swal2-popup {
+            align-self: start
+        }
+        
+        .swal2-container.swal2-top>.swal2-popup {
+            grid-column: 2;
+            align-self: start;
+            justify-self: center
+        }
+        
+        .swal2-container.swal2-top-end>.swal2-popup,
+        .swal2-container.swal2-top-right>.swal2-popup {
+            grid-column: 3;
+            align-self: start;
+            justify-self: end
+        }
+        
+        .swal2-container.swal2-center-start>.swal2-popup,
+        .swal2-container.swal2-center-left>.swal2-popup {
+            grid-row: 2;
+            align-self: center
+        }
+        
+        .swal2-container.swal2-center>.swal2-popup {
+            grid-column: 2;
+            grid-row: 2;
+            align-self: center;
+            justify-self: center
+        }
+        
+        .swal2-container.swal2-center-end>.swal2-popup,
+        .swal2-container.swal2-center-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 2;
+            align-self: center;
+            justify-self: end
+        }
+        
+        .swal2-container.swal2-bottom-start>.swal2-popup,
+        .swal2-container.swal2-bottom-left>.swal2-popup {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: end
+        }
+        
+        .swal2-container.swal2-bottom>.swal2-popup {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            align-self: end
+        }
+        
+        .swal2-container.swal2-bottom-end>.swal2-popup,
+        .swal2-container.swal2-bottom-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 3;
+            align-self: end;
+            justify-self: end
+        }
+        
+        .swal2-container.swal2-grow-row>.swal2-popup,
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup {
+            grid-column: 1/4;
+            width: 100%
+        }
+        
+        .swal2-container.swal2-grow-column>.swal2-popup,
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup {
+            grid-row: 1/4;
+            align-self: stretch
+        }
+        
+        .swal2-container.swal2-no-transition {
+            transition: none !important
+        }
+        
+        .swal2-popup {
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            grid-template-columns: minmax(0, 100%);
+            width: 32em;
+            max-width: 100%;
+            padding: 0 0 1.25em;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #545454;
+            font-family: inherit;
+            font-size: 1rem
+        }
+        
+        .swal2-popup:focus {
+            outline: none
+        }
+        
+        .swal2-popup.swal2-loading {
+            overflow-y: hidden
+        }
+        
+        .swal2-title {
+            position: relative;
+            max-width: 100%;
+            margin: 0;
+            padding: .8em 1em 0;
+            color: inherit;
+            font-size: 1.875em;
+            font-weight: 600;
+            text-align: center;
+            text-transform: none;
+            word-wrap: break-word
+        }
+        
+        .swal2-actions {
+            display: flex;
+            z-index: 1;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin: 1.25em auto 0;
+            padding: 0
+        }
+        
+        .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+            opacity: .4
+        }
+        
+        .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+        }
+        
+        .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+        }
+        
+        .swal2-loader {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 2.2em;
+            height: 2.2em;
+            margin: 0 1.875em;
+            animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            border-width: .25em;
+            border-style: solid;
+            border-radius: 100%;
+            border-color: #2778c4 rgba(0, 0, 0, 0) #2778c4 rgba(0, 0, 0, 0)
+        }
+        
+        .swal2-styled {
+            margin: .3125em;
+            padding: .625em 1.1em;
+            transition: box-shadow .1s;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+            font-weight: 500
+        }
+        
+        .swal2-styled:not([disabled]) {
+            cursor: pointer
+        }
+        
+        .swal2-styled.swal2-confirm {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #7066e0;
+            color: #fff;
+            font-size: 1em
+        }
+        
+        .swal2-styled.swal2-confirm:focus {
+            box-shadow: 0 0 0 3px rgba(112, 102, 224, .5)
+        }
+        
+        .swal2-styled.swal2-deny {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #dc3741;
+            color: #fff;
+            font-size: 1em
+        }
+        
+        .swal2-styled.swal2-deny:focus {
+            box-shadow: 0 0 0 3px rgba(220, 55, 65, .5)
+        }
+        
+        .swal2-styled.swal2-cancel {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #6e7881;
+            color: #fff;
+            font-size: 1em
+        }
+        
+        .swal2-styled.swal2-cancel:focus {
+            box-shadow: 0 0 0 3px rgba(110, 120, 129, .5)
+        }
+        
+        .swal2-styled.swal2-default-outline:focus {
+            box-shadow: 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+        
+        .swal2-styled:focus {
+            outline: none
+        }
+        
+        .swal2-styled::-moz-focus-inner {
+            border: 0
+        }
+        
+        .swal2-footer {
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: 1em 1em 0;
+            border-top: 1px solid #eee;
+            color: inherit;
+            font-size: 1em
+        }
+        
+        .swal2-timer-progress-bar-container {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            grid-column: auto !important;
+            overflow: hidden;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px
+        }
+        
+        .swal2-timer-progress-bar {
+            width: 100%;
+            height: .25em;
+            background: rgba(0, 0, 0, .2)
+        }
+        
+        .swal2-image {
+            max-width: 100%;
+            margin: 2em auto 1em
+        }
+        
+        .swal2-close {
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: -1.2em;
+            padding: 0;
+            overflow: hidden;
+            transition: color .1s, box-shadow .1s;
+            border: none;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0);
+            color: #ccc;
+            font-family: serif;
+            font-family: monospace;
+            font-size: 2.5em;
+            cursor: pointer;
+            justify-self: end
+        }
+        
+        .swal2-close:hover {
+            transform: none;
+            background: rgba(0, 0, 0, 0);
+            color: #f27474
+        }
+        
+        .swal2-close:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+        
+        .swal2-close::-moz-focus-inner {
+            border: 0
+        }
+        
+        .swal2-html-container {
+            z-index: 1;
+            justify-content: center;
+            margin: 1em 1.6em .3em;
+            padding: 0;
+            overflow: auto;
+            color: inherit;
+            font-size: 1.125em;
+            font-weight: normal;
+            line-height: normal;
+            text-align: center;
+            word-wrap: break-word;
+            word-break: break-word
+        }
+        
+        .swal2-input,
+        .swal2-file,
+        .swal2-textarea,
+        .swal2-select,
+        .swal2-radio,
+        .swal2-checkbox {
+            margin: 1em 2em 3px
+        }
+        
+        .swal2-input,
+        .swal2-file,
+        .swal2-textarea {
+            box-sizing: border-box;
+            width: auto;
+            transition: border-color .1s, box-shadow .1s;
+            border: 1px solid #d9d9d9;
+            border-radius: .1875em;
+            background: rgba(0, 0, 0, 0);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(0, 0, 0, 0);
+            color: inherit;
+            font-size: 1.125em
+        }
+        
+        .swal2-input.swal2-inputerror,
+        .swal2-file.swal2-inputerror,
+        .swal2-textarea.swal2-inputerror {
+            border-color: #f27474 !important;
+            box-shadow: 0 0 2px #f27474 !important
+        }
+        
+        .swal2-input:focus,
+        .swal2-file:focus,
+        .swal2-textarea:focus {
+            border: 1px solid #b4dbed;
+            outline: none;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+        
+        .swal2-input::placeholder,
+        .swal2-file::placeholder,
+        .swal2-textarea::placeholder {
+            color: #ccc
+        }
+        
+        .swal2-range {
+            margin: 1em 2em 3px;
+            background: #fff
+        }
+        
+        .swal2-range input {
+            width: 80%
+        }
+        
+        .swal2-range output {
+            width: 20%;
+            color: inherit;
+            font-weight: 600;
+            text-align: center
+        }
+        
+        .swal2-range input,
+        .swal2-range output {
+            height: 2.625em;
+            padding: 0;
+            font-size: 1.125em;
+            line-height: 2.625em
+        }
+        
+        .swal2-input {
+            height: 2.625em;
+            padding: 0 .75em
+        }
+        
+        .swal2-file {
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+            background: rgba(0, 0, 0, 0);
+            font-size: 1.125em
+        }
+        
+        .swal2-textarea {
+            height: 6.75em;
+            padding: .75em
+        }
+        
+        .swal2-select {
+            min-width: 50%;
+            max-width: 100%;
+            padding: .375em .625em;
+            background: rgba(0, 0, 0, 0);
+            color: inherit;
+            font-size: 1.125em
+        }
+        
+        .swal2-radio,
+        .swal2-checkbox {
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: inherit
+        }
+        
+        .swal2-radio label,
+        .swal2-checkbox label {
+            margin: 0 .6em;
+            font-size: 1.125em
+        }
+        
+        .swal2-radio input,
+        .swal2-checkbox input {
+            flex-shrink: 0;
+            margin: 0 .4em
+        }
+        
+        .swal2-input-label {
+            display: flex;
+            justify-content: center;
+            margin: 1em auto 0
+        }
+        
+        .swal2-validation-message {
+            align-items: center;
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: .625em;
+            overflow: hidden;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 1em;
+            font-weight: 300
+        }
+        
+        .swal2-validation-message::before {
+            content: "!";
+            display: inline-block;
+            width: 1.5em;
+            min-width: 1.5em;
+            height: 1.5em;
+            margin: 0 .625em;
+            border-radius: 50%;
+            background-color: #f27474;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.5em;
+            text-align: center
+        }
+        
+        .swal2-icon {
+            position: relative;
+            box-sizing: content-box;
+            justify-content: center;
+            width: 5em;
+            height: 5em;
+            margin: 2.5em auto .6em;
+            border: 0.25em solid rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            border-color: #000;
+            font-family: inherit;
+            line-height: 5em;
+            cursor: default;
+            user-select: none
+        }
+        
+        .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 3.75em
+        }
+        
+        .swal2-icon.swal2-error {
+            border-color: #f27474;
+            color: #f27474
+        }
+        
+        .swal2-icon.swal2-error .swal2-x-mark {
+            position: relative;
+            flex-grow: 1
+        }
+        
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            display: block;
+            position: absolute;
+            top: 2.3125em;
+            width: 2.9375em;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #f27474
+        }
+        
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: 1.0625em;
+            transform: rotate(45deg)
+        }
+        
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: 1em;
+            transform: rotate(-45deg)
+        }
+        
+        .swal2-icon.swal2-error.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+        
+        .swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+            animation: swal2-animate-error-x-mark .5s
+        }
+        
+        .swal2-icon.swal2-warning {
+            border-color: #facea8;
+            color: #f8bb86
+        }
+        
+        .swal2-icon.swal2-warning.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+        
+        .swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-i-mark .5s
+        }
+        
+        .swal2-icon.swal2-info {
+            border-color: #9de0f6;
+            color: #3fc3ee
+        }
+        
+        .swal2-icon.swal2-info.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+        
+        .swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-i-mark .8s
+        }
+        
+        .swal2-icon.swal2-question {
+            border-color: #c9dae1;
+            color: #87adbd
+        }
+        
+        .swal2-icon.swal2-question.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+        
+        .swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-question-mark .8s
+        }
+        
+        .swal2-icon.swal2-success {
+            border-color: #a5dc86;
+            color: #a5dc86
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 3.75em;
+            height: 7.5em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -0.4375em;
+            left: -2.0635em;
+            transform: rotate(-45deg);
+            transform-origin: 3.75em 3.75em;
+            border-radius: 7.5em 0 0 7.5em
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -0.6875em;
+            left: 1.875em;
+            transform: rotate(-45deg);
+            transform-origin: 0 3.75em;
+            border-radius: 0 7.5em 7.5em 0
+        }
+        
+        .swal2-icon.swal2-success .swal2-success-ring {
+            position: absolute;
+            z-index: 2;
+            top: -0.25em;
+            left: -0.25em;
+            box-sizing: content-box;
+            width: 100%;
+            height: 100%;
+            border: .25em solid rgba(165, 220, 134, .3);
+            border-radius: 50%
+        }
+        
+        .swal2-icon.swal2-success .swal2-success-fix {
+            position: absolute;
+            z-index: 1;
+            top: .5em;
+            left: 1.625em;
+            width: .4375em;
+            height: 5.625em;
+            transform: rotate(-45deg)
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-line] {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #a5dc86
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 2.875em;
+            left: .8125em;
+            width: 1.5625em;
+            transform: rotate(45deg)
+        }
+        
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+            top: 2.375em;
+            right: .5em;
+            width: 2.9375em;
+            transform: rotate(-45deg)
+        }
+        
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+            animation: swal2-animate-success-line-tip .75s
+        }
+        
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+            animation: swal2-animate-success-line-long .75s
+        }
+        
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+            animation: swal2-rotate-success-circular-line 4.25s ease-in
+        }
+        
+        .swal2-progress-steps {
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 100%;
+            margin: 1.25em auto;
+            padding: 0;
+            background: rgba(0, 0, 0, 0);
+            font-weight: 600
+        }
+        
+        .swal2-progress-steps li {
+            display: inline-block;
+            position: relative
+        }
+        
+        .swal2-progress-steps .swal2-progress-step {
+            z-index: 20;
+            flex-shrink: 0;
+            width: 2em;
+            height: 2em;
+            border-radius: 2em;
+            background: #2778c4;
+            color: #fff;
+            line-height: 2em;
+            text-align: center
+        }
+        
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+            background: #2778c4
+        }
+        
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step {
+            background: #add8e6;
+            color: #fff
+        }
+        
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
+            background: #add8e6
+        }
+        
+        .swal2-progress-steps .swal2-progress-step-line {
+            z-index: 10;
+            flex-shrink: 0;
+            width: 2.5em;
+            height: .4em;
+            margin: 0 -1px;
+            background: #2778c4
+        }
+        
+        [class^=swal2] {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+        
+        .swal2-show {
+            animation: swal2-show .3s
+        }
+        
+        .swal2-hide {
+            animation: swal2-hide .15s forwards
+        }
+        
+        .swal2-noanimation {
+            transition: none
+        }
+        
+        .swal2-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll
+        }
+        
+        .swal2-rtl .swal2-close {
+            margin-right: initial;
+            margin-left: 0
+        }
+        
+        .swal2-rtl .swal2-timer-progress-bar {
+            right: 0;
+            left: auto
+        }
+        
+        @keyframes swal2-toast-show {
+            0% {
+                transform: translateY(-0.625em) rotateZ(2deg)
+            }
+            33% {
+                transform: translateY(0) rotateZ(-2deg)
+            }
+            66% {
+                transform: translateY(0.3125em) rotateZ(2deg)
+            }
+            100% {
+                transform: translateY(0) rotateZ(0deg)
+            }
+        }
+        
+        @keyframes swal2-toast-hide {
+            100% {
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
+        }
+        
+        @keyframes swal2-toast-animate-success-line-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+            70% {
+                top: .625em;
+                left: -0.25em;
+                width: 1.625em
+            }
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+        }
+        
+        @keyframes swal2-toast-animate-success-line-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+        
+        @keyframes swal2-show {
+            0% {
+                transform: scale(0.7)
+            }
+            45% {
+                transform: scale(1.05)
+            }
+            80% {
+                transform: scale(0.95)
+            }
+            100% {
+                transform: scale(1)
+            }
+        }
+        
+        @keyframes swal2-hide {
+            0% {
+                transform: scale(1);
+                opacity: 1
+            }
+            100% {
+                transform: scale(0.5);
+                opacity: 0
+            }
+        }
+        
+        @keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+            70% {
+                top: 2.1875em;
+                left: -0.375em;
+                width: 3.125em
+            }
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+            100% {
+                top: 2.8125em;
+                left: .8125em;
+                width: 1.5625em
+            }
+        }
+        
+        @keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+        
+        @keyframes swal2-rotate-success-circular-line {
+            0% {
+                transform: rotate(-45deg)
+            }
+            5% {
+                transform: rotate(-45deg)
+            }
+            12% {
+                transform: rotate(-405deg)
+            }
+            100% {
+                transform: rotate(-405deg)
+            }
+        }
+        
+        @keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                transform: scale(0.4);
+                opacity: 0
+            }
+            50% {
+                margin-top: 1.625em;
+                transform: scale(0.4);
+                opacity: 0
+            }
+            80% {
+                margin-top: -0.375em;
+                transform: scale(1.15)
+            }
+            100% {
+                margin-top: 0;
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+        
+        @keyframes swal2-animate-error-icon {
+            0% {
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+            100% {
+                transform: rotateX(0deg);
+                opacity: 1
+            }
+        }
+        
+        @keyframes swal2-rotate-loading {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        @keyframes swal2-animate-question-mark {
+            0% {
+                transform: rotateY(-360deg)
+            }
+            100% {
+                transform: rotateY(0)
+            }
+        }
+        
+        @keyframes swal2-animate-i-mark {
+            0% {
+                transform: rotateZ(45deg);
+                opacity: 0
+            }
+            25% {
+                transform: rotateZ(-25deg);
+                opacity: .4
+            }
+            50% {
+                transform: rotateZ(15deg);
+                opacity: .8
+            }
+            75% {
+                transform: rotateZ(-5deg);
+                opacity: 1
+            }
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+        
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+            overflow: hidden
+        }
+        
+        body.swal2-height-auto {
+            height: auto !important
+        }
+        
+        body.swal2-no-backdrop .swal2-container {
+            background-color: rgba(0, 0, 0, 0) !important;
+            pointer-events: none
+        }
+        
+        body.swal2-no-backdrop .swal2-container .swal2-popup {
+            pointer-events: all
+        }
+        
+        body.swal2-no-backdrop .swal2-container .swal2-modal {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .4)
+        }
+        
+        @media print {
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                overflow-y: scroll !important
+            }
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true] {
+                display: none
+            }
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+                position: static !important
+            }
+        }
+        
+        body.swal2-toast-shown .swal2-container {
+            box-sizing: border-box;
+            width: 360px;
+            max-width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            pointer-events: none
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-top {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-top-end,
+        body.swal2-toast-shown .swal2-container.swal2-top-right {
+            top: 0;
+            right: 0;
+            bottom: auto;
+            left: auto
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-top-start,
+        body.swal2-toast-shown .swal2-container.swal2-top-left {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 0
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-center-start,
+        body.swal2-toast-shown .swal2-container.swal2-center-left {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 0;
+            transform: translateY(-50%)
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-center {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-center-end,
+        body.swal2-toast-shown .swal2-container.swal2-center-right {
+            top: 50%;
+            right: 0;
+            bottom: auto;
+            left: auto;
+            transform: translateY(-50%)
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-bottom-start,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-bottom {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        
+        body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: auto
+        }
+    </style>
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="leftContainer">
+            <div>
+                <div>
+                    <div id="sidebarOverlay" style="display: none;"></div>
+                    <div class="w3-sidebar w3-bar-block" id="mySidebar" style="left: -300px;">
+                        <a class="w3-bar-item w3-button" href="/Profile">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon" style="background-color: unset;"><img src="/static/media/Group-8.6aedb935d82519eda51c.png" alt="profile" style="border-radius: 50%;"></picture>
+                                <div style="margin-left: 0.5rem;">My Profile</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/landing">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-miterlimit="10" stroke-width="32" d="M467.51 248.83c-18.4-83.18-45.69-136.24-89.43-149.17A91.5 91.5 0 00352 96c-26.89 0-48.11 16-96 16s-69.15-16-96-16a99.09 99.09 0 00-27.2 3.66C89 112.59 61.94 165.7 43.33 248.83c-19 84.91-15.56 152 21.58 164.88 26 9 49.25-9.61 71.27-37 25-31.2 55.79-40.8 119.82-40.8s93.62 9.6 118.66 40.8c22 27.41 46.11 45.79 71.42 37.16 41.02-14.01 40.44-79.13 21.43-165.04z"></path><circle cx="292" cy="224" r="20"></circle><path d="M336 288a20 20 0 1120-19.95A20 20 0 01336 288z"></path><circle cx="336" cy="180" r="20"></circle><circle cx="380" cy="224" r="20"></circle><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M160 176v96m48-48h-96"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Win cash</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/wallet">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">My wallet</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/Gamehistory">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Game History</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/transaction-history">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Transaction History</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/refer">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3zM4 8a3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4 3.91 3.91 0 0 0-4 4zm6 0a1.91 1.91 0 0 1-2 2 1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2zM4 18a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1h2v-1a5 5 0 0 0-5-5H7a5 5 0 0 0-5 5v1h2z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Refer and Earn</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/Referral-history">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Refer History</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/Notification">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257 120.471c7.083 0 23.911 4.479 23.911 4.479 45.589 10.447 77.678 52.439 77.678 99.85V352.412l9.321 9.364 7.788 7.823H136.302l7.788-7.823 9.321-9.364V224.8c0-47.41 32.089-89.403 77.678-99.85 0 0 18.043-4.479 23.911-4.479M256 48c-17.602 0-31.059 13.518-31.059 31.2v14.559c-59.015 13.523-103.53 67.601-103.53 131.041v114.4L80 380.8v20.8h352v-20.8l-41.411-41.6V224.8c0-63.44-44.516-117.518-103.53-131.041V79.2c0-17.682-13.457-31.2-31.059-31.2zm41.411 374.4h-82.823c0 22.881 18.633 41.6 41.412 41.6s41.411-18.719 41.411-41.6z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Notification</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/support">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">Support</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                        <a class="w3-bar-item w3-button" href="/about">
+                            <div class="w3-bar-item-div">
+                                <picture class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path></svg></picture>
+                                <div style="margin-left: 0.5rem;">All Policy</div>
+                            </div>
+                            <div class=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div>
+                        </a>
+                    </div>
+                    <div class="w3-teal">
+                        <div class="w3-container ">
+                            <div class="Nav_headerContainer__Lr6OY "><button class="w3-button w3-teal w3-xlarge float-left" id="hambergar"><picture class="Nav_sideNavIcon__t9LRY mr-0"><img src="/images/LandingPage_img/sidebar.png" class="snip-img" alt=""></picture></button>
+                                <a href="/">
+                                    <picture class="ml-2 Nav_navLogo__wHVgB d-flex"><img src="/mainimage/rkludologo.webp" class="snip-img" alt="logo"></picture>
+                                </a>
+                                <div>
+                                    <div class="Nav_menu_items__oZZjO">
+                                        <a class="Nav_box__YhoM1" href="/Addcase" style="background: rgb(32, 129, 119);">
+                                            <picture class="Nav_moneyIcon_container__4PPcj"><img src="/images/LandingPage_img/global-rupeeIcon.png" class="snip-img" alt=""></picture>
+                                            <div class="mt-1 ml-1">
+                                                <div class="Nav_moneyBox_header__RWp3D" style="color: rgb(255, 255, 255);">Coin</div>
+                                                <div class="Nav_moneyBox_text__+7+QB" style="color: rgb(255, 255, 255);">30.5</div>
+                                            </div>
+                                            <picture class="Nav_moneyBox_add__gx7W1" style="background: rgb(0, 0, 0); padding-right: 20px;"><img src="/images/LandingPage_img/addSign.png" class="snip-img" alt=""></picture>
+                                        </a>
+                                        <a class="Nav_box__YhoM1 ml-2" href="/redeem/refer" style="background: rgb(32, 129, 119);">
+                                            <picture class="Nav_moneyIcon_container__4PPcj"><img src="/images/LandingPage_img/notification-activity-reward.png" class="snip-img" alt=""></picture>
+                                            <div class="mt-1 ml-1">
+                                                <div class="Nav_moneyBox_header__RWp3D" style="color: rgb(255, 255, 255);">Earning</div>
+                                                <div class="Nav_moneyBox_text__+7+QB" style="color: rgb(255, 255, 255);">128.5</div>
+                                            </div>
+                                        </a>
+                                    </div><span class="mx-5"></span></div><span class="mx-5"></span></div>
+                        </div>
+                    </div>
+                    <div class="bottom_menus_main">
+                        <div class="main_bottom_menus">
+                            <nav class="bottom_link_main"><a class="bottom_link  active_link" href="/landing" aria-current="page"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="sidebar_link_icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M1016.7 513.36L536.331 10.192a31.924 31.924 0 0 0-23.088-9.84 32.038 32.038 0 0 0-23.088 9.84L7.307 513.344c-12.24 12.752-11.808 32.992.944 45.248 12.752 12.224 32.992 11.872 45.248-.944l43.007-44.832v478.832c0 17.68 14.336 32 32 32h223.552c17.632 0 31.936-14.256 32-31.905l1.008-319.664h254.992v319.568c0 17.68 14.32 32 32 32H895.53c17.68 0 32-14.32 32-32V512.655l42.992 45.04a31.997 31.997 0 0 0 23.09 9.84c7.967 0 15.967-2.944 22.16-8.944 12.736-12.224 13.152-32.48.928-45.232zm-153.165-58.544v504.831H704.063V640.095c0-17.68-14.32-32-32-32h-318.88c-17.632 0-31.936 14.256-32 31.904l-1.008 319.664H160.511V454.815c0-2.64-.416-5.168-1.008-7.632L513.263 78.56l351.424 368.208c-.688 2.592-1.152 5.264-1.152 8.048z"></path></svg><span> Home</span></a>
+                                <a class="bottom_link " href="/wallet"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="sidebar_link_icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"></path></svg><span> wallet</span></a>
+                                <a class="bottom_link " href="/Profile"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="sidebar_link_icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span> Profile</span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leftContainer mb_space">
+            <div class="main-area" style="padding-top: 38px;">
+                <div class="alrt_msg_div1" style="background-color: unset;">
+                    <h5 class="text-danger content-box text-center line2" style="transition: all 0.5s ease 0s;">आपकी समस्याओं के लिए हम सदैव तत्पर हैं कृपया हमारे व्हाट्सएप नंबर पर अपनी समस्या का निवारण करवा सकते हो +918302695247 </h5>
+                </div>
+                <section class="games-section p-3">
+                    <div class="games-section-titl">
+                        <h4>Tournaments</h4><a class="download-youtube-btn" href="https://www.youtube.com/@RkLudo.in82" target="_blank"><span style="font-size: 12px; color: rgb(255, 255, 255);"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 18px; margin-right: 5px;"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path></svg>You Tube</span></a></div>
+                    <div class="games-section-headline mt-2 mb-1">
+                        <div class="games-window "><a class="gameCard-container" href="/Homepage/ludoClassicManual"><a class="gameCard pt-2 " href="/Homepage/ludoClassicManual"><span class="d-none blink text-success d-block text-right">◉ LIVE</span><picture class="gameCard-image"><img width="100%" src="./mainimage/ludoclassicmanual.png" alt=""></picture></a></a>
+                            <a class="gameCard-container" href="/Homepage/Ludo Classics"><a class="gameCard pt-2" href="/Homepage/Ludo Classics"><span class="d-none blink text-success d-block text-right">◉ LIVE</span><picture class="gameCard-image"><img width="100%" src="./mainimage/ludoclassicauto.png" alt=""></picture></a></a>
+                            <a class="gameCard-container" href="/Homepage/Ludo Popular"><a class="gameCard pt-2 " href="/Homepage/Ludo Popular"><span class="d-none blink text-success d-block text-right">◉ LIVE</span><picture class="gameCard-image"><img width="100%" src="./mainimage/ludoclassicpopular.png" alt=""></picture></a>
+                            <div class="goverlay">
+                                <div class="text">Comming Soon</div>
+                            </div>
+                            </a><a class="gameCard-container" href=""><a class="gameCard pt-2 " href="/support"><span class="d-none blink text-danger d-block text-right">Support</span><picture class="gameCard-image"><img width="100%" src="./mainimage/rksupport.png" alt=""></picture></a></a>
+                        </div>
+                    </div>
+                </section>
+                <div class="downloadButton"></div>
+            </div>
+        </div>
+        <div class="rightContainer">
+            <div>
+                <div class="rightContainer">
+                    <div class="rcBanner flex-center ">
+                        <picture class="rcBanner-img-container animate__bounce infinite "><img src="/mainimage/rklogo.webp" alt=""></picture>
+                        <div class="rcBanner-text " style="font-weight: bolder;"> <img src="/mainimage/rkludologo.webp" class="snip-img" alt="logo" style="max-width: 150px;"> <span class="rcBanner-text-bold" style="font-weight: normal; font-size: 24px;">Win Real Cash</span></div>
+                        <div class="rcBanner-footer">For best experience, open&nbsp;<a href="/" style="color: rgb(44, 44, 44); font-weight: 500; text-decoration: none;">rkludo.in</a>&nbsp;on&nbsp;<img src="/images/chrome.png" alt="">&nbsp;chrome mobile</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Toastify"></div>
+        <div class="Toastify"></div>
+    </div><iframe src="https://sdk.cashfree.com/js/v3/c4e155a6b36630a360dc46fe248a7418/atoms/ping_atom.html?context=production" style="display: none;"></iframe></body>
+
+</html>

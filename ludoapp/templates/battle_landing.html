@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Battle Page</title>
+    <style>
+        /* Style adjustments and animations for better UX */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #000000, #ff0000);
+            animation: backgroundAnimation 5s infinite alternate;
+        }
+        
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #000000, #ff0000);
+            }
+            100% {
+                background: linear-gradient(135deg, #ff0000, #000000);
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            animation: containerAnimation 1s ease-in-out;
+        }
+        
+        @keyframes containerAnimation {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .notice {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: red;
+        }
+        
+        .create-battle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .create-battle input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            flex: 1;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .create-battle input:focus {
+            border-color: #ff0000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+        
+        .create-battle button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .create-battle button:hover {
+            background-color: #218838;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .rules {
+            float: right;
+            font-size: 14px;
+            color: #888;
+            cursor: pointer;
+        }
+        
+        .battle-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .battle-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .battle-item:hover {
+            background-color: #f1f1f1;
+            border-color: #ccc;
+        }
+        
+        .battle-item span {
+            font-size: 16px;
+        }
+        
+        .battle-item button {
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .battle-item button:hover {
+            background-color: #0056b3;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #d60505ce;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #507288;
+            color: black;
+        }
+        
+        .topnav a.active {}
+        
+        .topnav .icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #4caf50;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .footer-button:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'ludoapp:demo' %}" class="active">My profile</a>
+        <a href="{% url 'ludoapp:landing' %}">Win cash</a>
+        <a href="{% url 'ludoapp:wallet'%}">My Wallet</a>
+        <a href="{% url 'ludoapp:demo'%}">Game History</a>
+        <a href="#home" class="active">Transaction History</a>
+        <a href="{% url 'ludoapp:refer' %}">Refer & Earn</a>
+        <a href="#contact">Refer History</a>
+        <a href="#about">Notification</a>
+        <a href="{% url 'ludoapp:support1' %}">Support</a>
+        <a href="{% url 'ludoapp:policy' %}">All Policies</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="container">
+        <div class="notice">
+            हम किसी यूजर से ओटीपी नहीं लेते तो कृपया अपना ओटीपी किसी और यूजर के साथ शेयर ना करें
+        </div>
+        <div class="create-battle">
+            <form id="createBattleForm" method="post" action="{% url 'ludoapp:battle' %}">
+                {% csrf_token %}
+                <input type="number" id="amount" name="amount" placeholder="Amount">
+                <button type="submit">SET</button>
+            </form>
+        </div>
+        <div class="section">
+            <h3>Open Battles <span class="rules">RULES</span></h3>
+            <ul id="openBattles" class="battle-list">
+                {% for Battle in bdetail %}
+                <li class="battle-item">
+                    <span>Battle for ₹{{ Battle.amount }}</span>
+                    <button type="button">Play</button>
+                </li>
+                {% empty %}
+                <li>No open battles</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Running Battles</h3>
+        </div>
+    </div>
+    <footer>
+        <a href="{% url 'ludoapp:landing' %}"><button class="footer-button">
+            <i class="fa fa-home"></i>
+        </button></a>
+        <a href="{% url 'ludoapp:wallet' %}"><button class="footer-button">
+            <i class="fa fa-phone"></i>
+        </button></a>
+        <a href="{% url 'ludoapp:refer' %}"><button class="footer-button">
+            <i class="fa fa-address-book"></i>
+        </button></a>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

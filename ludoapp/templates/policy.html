@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+<!-- nevbarcss -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+        overflow: hidden;
+        background-color: #d60505ce;
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    .topnav a:hover {
+        background-color: #507288;
+        color: black;
+    }
+    
+    .topnav a.active {
+        /* background-color: #507288; */
+        /* color: 507288; */
+    }
+    
+    .topnav .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 6;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            margin-left: -5px;
+        }
+    }
+    
+    .empty {
+        display: block;
+        margin-left: -100px;
+    }
+    /*  Policy style */
+    
+    body {
+        background-color: #f8f9fa;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .header img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+        margin-top: 20px;
+    }
+    
+    p {
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+    /*  Policy style end */
+    /* Footer Style  */
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #4caf50;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .footer-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .footer-button:hover {
+        color: #ddd;
+    }
+    /* Footer Style End */
+    /*  */
+</style>
+<!-- nabvarcss -->
+<!-- navbaehtmlscript -->
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <!-- <a class="empty"></a> -->
+        <a href="{% url 'ludoapp:demo' %}" class="active">My profile</a>
+        <a href="{% url 'ludoapp:landing' %}">Win cash</a>
+        <a href="{% url 'ludoapp:wallet'%}">My Wallet</a>
+        <a href="{% url 'ludoapp:demo'%}">Game History</a>
+        <a href="#home" class="active">Transaction History</a>
+        <a href="{% url 'ludoapp:refer' %}">Refer & Earn</a>
+        <a href="#contact">Refer History</a>
+        <a href="#about">Notification</a>
+        <a href="{% url 'ludoapp:support1' %}">Support</a>
+        <a href="{% url 'ludoapp:policy' %}">All Policies</a>
+        <!-- <a href="#home" class="active">My profile</a>
+        <a href="#news">Win cash</a>
+        <a href="#contact">My Wallet</a>
+        <a href="#about">Game History</a>
+        <a href="#home" class="active">Transaction History</a>
+        <a href="#news">Refer & Earn</a>
+        <a href="#contact">Refer History</a>
+        <a href="#about">Notification</a>
+        <a href="#contact">Support</a>
+        <a href="#about">All Policies</a> -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";  
+            }
+        }
+    </script>
+    <!-- Nav end -->
+
+    <!-- Policy -->
+
+
+
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/50" alt="Logo">
+            <h1>Terms, Privacy, Support</h1>
+        </div>
+
+        <h2>About Us</h2>
+        <p>RK Ludo is a real-money gaming product owned and operated by DIVY WEBTECH PRIVATE LIMITED ("RK Ludo" or "We" or "Us" or "Our").</p>
+
+        <h2>Our Business & Products</h2>
+        <p>We are an HTML5 game-publishing company and our mission is to make accessing games fast and easy by removing the friction of app-installs.</p>
+        <p>RK Ludo is a skill-based real-money gaming platform accessible only for our users in India. It is accessible on <a href="https://www.rkudo.in">https://www.rkudo.in</a>. On RK Ludo, users can compete for real cash in Tournaments and Battles. They
+            can encash their winnings via popular options such as Paytm Wallet, Amazon Pay, Bank Transfer, Mobile Recharges etc.</p>
+
+        <h2>Our Games</h2>
+        <p>RK Ludo has a wide variety of high-quality, premium HTML5 games. Our games are especially compressed and optimised to work on low-end devices, uncommon browsers, and patchy internet speeds.</p>
+        <p>We have games across several popular categories: Arcade, Action, Adventure, Sports & Racing, Strategy, Puzzle & Logic. We also have a strong portfolio of multiplayer games such as Ludo, Chess, 8 Ball Pool, Carrom, Tic Tac Toe, Archery, Quiz, Chinese
+            Checkers and more! Some of our popular titles are: Escape Run, Bubble Wipeout, Tower Twist, Cricket Gunda, Ludo With Friends. If you have any suggestions around new games that we should add or if you are a game developer yourself and want
+            to work with us, don't hesitate to drop in a line at info@rkludo.com.</p>
+    </div>
+
+
+    <!-- Policy end -->
+
+    <!-- Footer Start -->
+    <footer>
+        <a href="{% url 'ludoapp:landing' %}"><button class="footer-button" >
+      <i class="fa fa-home"></i>
+  </button></a>
+        <a href="{% url 'ludoapp:wallet' %}"><button class="footer-button" >
+      <i class="fa fa-phone"></i>
+  </button></a>
+        <a href="{% url 'ludoapp:support1' %}"><button class="footer-button" >
+      <i class="fa fa-user"></i>
+  </button></a>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Footer End -->
+</body>
+<!-- navbarhtmlscript -->
+
+</html>

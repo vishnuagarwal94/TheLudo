@@ -1,0 +1,157 @@
+<!--{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Ludo Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .sidebar {
+            background: #fff;
+            height: 100vh;
+            width: 500px;
+            padding: 1rem;
+        }
+        
+        .sidebar .user-info {
+            background-image: url('/static/img/editbg.png');
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar .user-info img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        
+        .User-Image {
+            margin-left: -350px;
+            margin-bottom: -26%;
+        }
+        
+        .sidebar .user-info p {
+            margin: 0;
+        }
+        
+        .sidebar .nav-item {
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar .nav-item a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .sidebar .nav-item a:hover {
+            background: #007bff;
+            color: #fff;
+        }
+        
+        .sidebar .nav-item a .material-icons {
+            margin-right: 0.5rem;
+        }
+        
+        .content {
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        .content img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggle-btn">☰</button>
+    <div id="navbar">
+        <ul>
+            <li><a href="{% url 'ludoapp:profile' %}">My Profile</a></li>
+            <li><a href="#">Win cash</a></li>
+            <li><a href="#">My wallet</a></li>
+            <li><a href="#">Game History</a></li>
+            <li><a href="#">Transaction History</a></li>
+            <li><a href="#">Refer and Earn</a></li>
+            <li><a href="#">Refer History</a></li>
+            <li><a href="#">Notification</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">All Policy</a></li>
+        </ul> 
+</div>
+<div class="d-flex">
+    <div class="sidebar">
+
+
+        <div class="user-info">
+
+
+            <div>
+                <img src="{% static 'img/chrome.png' %}" class="User-Image">
+            </div>
+            <div>
+                <p>Loading...</p>
+                <p>ID: 001652</p>
+                <p>Phone: 8696010163</p>
+                <p>Email: lg00022@gmail.com</p>
+
+            </div>
+            <div class="profile-button">
+                <button class="btn btn-primary btn-sm">Edit Profile</button>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">
+                <span class="material-icons">account_balance_wallet</span> My Wallet
+            </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">
+                <span class="material-icons">verified_user</span> Completed Kyc
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#">
+                <span class="material-icons">monetization_on</span> Cash Won
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#">
+                <span class="material-icons">sports_esports</span> Battle Played
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#">
+                <span class="material-icons">group_add</span> Referral Earning
+            </a>
+        </div>
+        <button class="btn btn-outline-danger btn-block mt-3">Log Out</button>
+    </div>
+    <div class="content flex-grow-1">
+        <img src="{% static 'img/logo.webp' %}" alt="RK Ludo Logo">
+        <h2>For best experience, open <a href="https://rkludo.in">rkludo.in</a> on Chrome mobile</h2>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>-->

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000, #ff0000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: backgroundAnimation 5s infinite alternate;
+        }
+        
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #000000, #ff0000);
+            }
+            100% {
+                background: linear-gradient(135deg, #ff0000, #000000);
+            }
+        }
+        
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: containerAnimation 1s ease-in-out;
+        }
+        
+        @keyframes containerAnimation {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .form-control {
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #ff0000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background-color: #ff0000;
+            border-color: #ff0000;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #cc0000;
+            border-color: #cc0000;
+        }
+        
+        .text-center {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2 class="text-center mb-4">Login</h2>
+        <form action="{% url 'ludoapp:login_page' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

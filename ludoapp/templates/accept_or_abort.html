@@ -1,0 +1,26 @@
+<!-- templates/battle/accept_or_abort.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept or Abort Request</title>
+</head>
+
+<body>
+    <h1>Battle for ₹{{ battle.amount }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="accept">Accept</button>
+        <button type="submit" name="abort">Abort</button> {% if battle.is_running %}
+        <div>
+            <label for="room_code">Room Code:</label>
+            <input type="text" id="room_code" name="room_code" value="{{ battle.room_code }}">
+            <button type="submit" name="send_code">Send Code</button>
+        </div>
+        {% endif %}
+    </form>
+</body>
+
+</html>

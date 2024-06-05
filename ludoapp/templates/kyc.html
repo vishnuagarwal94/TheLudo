@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Form</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #000000, #ff0000);
+            animation: backgroundAnimation 5s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #000000, #ff0000);
+            }
+            100% {
+                background: linear-gradient(135deg, #ff0000, #000000);
+            }
+        }
+        
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            animation: containerAnimation 1s ease-in-out;
+        }
+        
+        @keyframes containerAnimation {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ff0000;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="file"]:focus {
+            border-color: #ff0000;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff0000;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: #d60000;
+        }
+    </style>
+    <div class="form-container">
+        <h2>KYC Form</h2>
+        <form method="post" action="{% url 'ludoapp:kyc' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" value="{{ phone }}" readonly required>
+            </div>
+            <div class="form-group">
+                <label for="aadharFront">Aadhaar Front Image:</label>
+                <input type="file" id="front_image" name="front_image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="aadharBack">Aadhaar Back Image:</label>
+                <input type="file" id="back_image" name="back_image" accept="image/*" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

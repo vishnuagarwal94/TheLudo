@@ -1,0 +1,656 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer & Earn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    /* General Styles */
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #000000, #ff0000);
+        animation: backgroundAnimation 5s infinite alternate;
+    }
+    
+    @keyframes backgroundAnimation {
+        0% {
+            background: linear-gradient(135deg, #000000, #ff0000);
+        }
+        100% {
+            background: linear-gradient(135deg, #ff0000, #000000);
+        }
+    }
+    /* Navbar Styles */
+    
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(214, 5, 5, 0.8);
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .topnav a:hover {
+        background-color: #507288;
+        color: black;
+    }
+    
+    .topnav .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 6px;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            margin-left: -5px;
+        }
+    }
+    /* Header and Earnings Section Styles */
+    
+    header,
+    .earnings,
+    footer {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .wallet {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .coin,
+    .earning {
+        background-color: #ff0000;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+    
+    main {
+        padding: 2rem;
+        color: white;
+    }
+    
+    .earnings {
+        text-align: center;
+    }
+    
+    .earnings h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .earnings p,
+    .refer-rules p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .progress-bar {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    
+    .progress {
+        background-color: #ff0000;
+        height: 10px;
+    }
+    
+    .refer-code button {
+        background: none;
+        border: none;
+        color: #ff0000;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .refer-code button:hover {
+        color: #d60000;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #4caf50;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .footer-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .footer-button:hover {
+        color: #ddd;
+    }
+    
+    @media (max-width: 768px) {
+        header,
+        .wallet,
+        main,
+        .earnings,
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        .wallet,
+        .footer1 {
+            gap: 0.5rem;
+        }
+    }
+</style>
+
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a class="empty"></a>
+    <a href="{% url 'ludoapp:demo' %}" class="active">My profile</a>
+    <a href="{% url 'ludoapp:landing' %}">Win cash</a>
+    <a href="{% url 'ludoapp:wallet'%}">My Wallet</a>
+    <a href="{% url 'ludoapp:demo'%}">Game History</a>
+    <a href="#home" class="active">Transaction History</a>
+    <a href="{% url 'ludoapp:refer' %}">Refer & Earn</a>
+    <a href="#contact">Refer History</a>
+    <a href="#about">Notification</a>
+    <a href="{% url 'ludoapp:support1' %}">Support</a>
+    <a href="{% url 'ludoapp:policy' %}">All Policies</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";  
+        }
+    }
+</script>
+
+
+<main>
+    <section class="earnings">
+        <h1>Earn now unlimited <span>🎉</span></h1>
+        <p>Refer your friends now!</p>
+        <div class="current-earnings">
+            <span>Current Earning: 128.5</span>
+            <a href="#">Redeem</a>
+        </div>
+        <div class="total-earnings">
+            <span>Total Earned: 105186.5</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 100%;"></div>
+        </div>
+        <div class="max-limit">
+            <span>Max: ₹10,000</span>
+            <a href="#">Upgrade Limit</a>
+        </div>
+        <div class="refer-code">
+            <span>Your Refer Code: 861335</span>
+            <button onclick="copyReferCode()">📋</button>
+        </div>
+        <div class="total-refers">
+            <span>Total Refers:</span>
+        </div>
+    </section>
+    <section class="refer-rules">
+        <h2>Refer & Earn Rules</h2>
+        <p>When your friend signs up on RK Ludo from your referral link,</p>
+        <p>You get 1% Commission on your referral’s winnings</p>
+        <p>You get ₹100 Cash</p>
+    </section>
+</main>
+<div class="footer1">
+    <button class="whatsapp">WhatsApp</button>
+    <button class="share">Share</button>
+    <button class="copy">Copy</button>
+</div>
+
+<script>
+    function copyReferCode() {
+        const referCode = '861335';
+        navigator.clipboard.writeText(referCode).then(() => {
+            alert('Refer code copied to clipboard');
+        }).catch(err => {
+            alert('Failed to copy refer code');
+            console.error('Could not copy text: ', err);
+        });
+    }
+</script>
+
+
+<footer>
+    <a href="{% url 'ludoapp:landing' %}"><button class="footer-button">
+            <i class="fa fa-home"></i>
+        </button></a>
+    <a href="{% url 'ludoapp:wallet' %}"><button class="footer-button">
+            <i class="fa fa-phone"></i>
+        </button></a>
+    <a href="{% url 'ludoapp:support1' %}"><button class="footer-button">
+            <i class="fa fa-user"></i>
+        </button></a>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer & Earn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    /* General Styles */
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #000000, #ff0000);
+        animation: backgroundAnimation 5s infinite alternate;
+    }
+    
+    @keyframes backgroundAnimation {
+        0% {
+            background: linear-gradient(135deg, #000000, #ff0000);
+        }
+        100% {
+            background: linear-gradient(135deg, #ff0000, #000000);
+        }
+    }
+    /* Navbar Styles */
+    
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(214, 5, 5, 0.8);
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .topnav a:hover {
+        background-color: #507288;
+        color: black;
+    }
+    
+    .topnav .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 6px;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            margin-left: -5px;
+        }
+    }
+    /* Header and Earnings Section Styles */
+    
+    header,
+    .earnings,
+    footer {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .wallet {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .coin,
+    .earning {
+        background-color: #ff0000;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+    
+    main {
+        padding: 2rem;
+        color: white;
+    }
+    
+    .earnings {
+        text-align: center;
+    }
+    
+    .earnings h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .earnings p,
+    .refer-rules p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .progress-bar {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    
+    .progress {
+        background-color: #ff0000;
+        height: 10px;
+    }
+    
+    .refer-code {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .refer-code span {
+        font-size: 1.2rem;
+    }
+    
+    .refer-code button {
+        background: none;
+        border: none;
+        color: #ff0000;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .refer-code button:hover {
+        color: #d60000;
+    }
+    
+    .total-refers {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .total-refers span {
+        font-weight: bold;
+    }
+    
+    .footer1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #4caf50;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .footer-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .footer-button:hover {
+        color: #ddd;
+    }
+    
+    @media (max-width: 768px) {
+        header,
+        .wallet,
+        main,
+        .earnings,
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        .wallet,
+        .footer1 {
+            gap: 0.5rem;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav">
+        <a class="empty"></a>
+        <a href="{% url 'ludoapp:demo' %}" class="active">My profile</a>
+        <a href="{% url 'ludoapp:landing' %}">Win cash</a>
+        <a href="{% url 'ludoapp:wallet'%}">My Wallet</a>
+        <a href="{% url 'ludoapp:demo'%}">Game History</a>
+        <a href="#home" class="active">Transaction History</a>
+        <a href="{% url 'ludoapp:refer' %}">Refer & Earn</a>
+        <a href="#contact">Refer History</a>
+        <a href="#about">Notification</a>
+        <a href="{% url 'ludoapp:support1' %}">Support</a>
+        <a href="{% url 'ludoapp:policy' %}">All Policies</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <!-- Refer And Earn -->
+    <main>
+        <section class="earnings">
+            <h1>Earn now unlimited <span>🎉</span></h1>
+            <p>Refer your friends now!</p>
+            <div class="current-earnings">
+                <span>Current Earning: 128.5</span>
+                <a href="#">Redeem</a>
+            </div>
+            <div class="total-earnings">
+                <span>Total Earned: 105186.5</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;"></div>
+            </div>
+            <div class="max-limit">
+                <span>Max: ₹10,000</span>
+                <a href="#">Upgrade Limit</a>
+            </div>
+            <div class="refer-code">
+                <span>Your Refer Code: {{ refer_code }}</span>
+                <button onclick="copyReferCode()">📋</button>
+            </div>
+            <div class="total-refers">
+                <span>Total Refers:</span>
+            </div>
+        </section>
+        <section class="refer-rules">
+            <h2>Refer & Earn Rules</h2>
+            <p>When your friend signs up on RK Ludo from your referral link,</p>
+            <p>You get 1% Commission on your referral’s winnings</p>
+            <p>You get ₹100 Cash</p>
+        </section>
+    </main>
+    <div class="footer1">
+        <a href="{% url 'ludoapp:share_whatsapp' %}">
+            <button class="whatsapp">WhatsApp</button>
+        </a>
+        <a href="{% url 'ludoapp:share_telegram' %}">
+            <button class="share">Share</button>
+        </a>
+        <a href="{% url 'ludoapp:copy_refer_code' %}">
+            <button class="copy">Copy</button>
+        </a>
+    </div>
+
+    <script>
+        function copyReferCode() {
+            const referCode = '{{ refer_code }}';
+            navigator.clipboard.writeText(referCode).then(() => {
+                alert('Refer code copied to clipboard');
+            }).catch(err => {
+                alert('Failed to copy refer code');
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <a href="{% url 'ludoapp:landing' %}">
+            <button class="footer-button">
+                        <i class="fa fa-home"></i>
+                    </button>
+        </a>
+        <a href="{% url 'ludoapp:wallet' %}">
+            <button class="footer-button">
+                        <i class="fa fa-phone"></i>
+                    </button>
+        </a>
+        <a href="{% url 'ludoapp:support1' %}">
+            <button class="footer-button">
+                        <i class="fa fa-user"></i>
+                    </button>
+        </a>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

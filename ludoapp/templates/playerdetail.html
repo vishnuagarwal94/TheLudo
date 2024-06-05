@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Players Detail</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            border: 1px solid #dddddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            border: 1px solid #dddddd;
+            padding: 12px;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        .button.disabled {
+            background-color: #c82333;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Players Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Mobile Number</th>
+                <th>Aadhar Front Image</th>
+                <th>Aadhar Back Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in pdetail %}
+            <tr>
+                <td>{{ player.player_name }}</td>
+                <td>{{ player.phone }}</td>
+                <td>
+                    {% if player.front_image %}
+                    <a href="{{ player.front_image.url }}" data-lightbox="image-1">
+                        <img src="{{ player.front_image.url }}" alt="Front Image" width="100"></a> {% else %} No Image {% endif %}
+                </td>
+                <td>
+                    {% if player.back_image %}
+                    <a href="{{ player.back_image.url }}" data-lightbox="image-2">
+                        <img src="{{ player.back_image.url }}" alt="Back Image" width="100"></a> {% else %} No Image {% endif %}
+                </td>
+                <td>
+                    <form method="post" action="{% url 'ludoapp:approve_player' player.phone %}">
+                        {% csrf_token %}
+                        <button type="submit" class="button">Approve</button>
+                    </form>
+                    <form method="post" action="{% url 'ludoapp:delete_player' player.phone %}" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
+</html>

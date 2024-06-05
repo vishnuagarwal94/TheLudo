@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Referral Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .refer-code {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .copy-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Copy Your Referral Code</h1>
+        <div class="refer-code" id="refer-code">{{ refer_code }}</div>
+        <button class="copy-button" onclick="copyReferCode()">Copy Code</button>
+    </div>
+    <script>
+        function copyReferCode() {
+            var referCode = document.getElementById('refer-code').innerText;
+            navigator.clipboard.writeText(referCode).then(function() {
+                alert('Referral code copied to clipboard!');
+            }, function() {
+                alert('Failed to copy referral code.');
+            });
+        }
+    </script>
+</body>
+
+</html>

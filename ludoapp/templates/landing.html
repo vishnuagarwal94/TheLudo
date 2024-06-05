@@ -1,0 +1,1011 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rk-ludo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        display: inline-block;
+        text-decoration: none !important;
+    }
+    
+    .flex-1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+        position: sticky;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    .logo img {
+        width: 50%;
+        margin-left: 10px
+    }
+    
+    .rk-ludo a {
+        padding: 6px 25px;
+        border: 1px solid #023441;
+        font-size: 16px;
+        transition: all 0.5s;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    
+    .rk-ludo a:hover {
+        background-color: #023441;
+        color: #fff;
+    }
+    
+    .withorawal p {
+        border: 1px solid red;
+        padding: 10px 10px;
+        color: red;
+        font-size: 13px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500 !important;
+    }
+    
+    .border-none {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .border-none img {
+        width: 19px !important;
+    }
+    
+    .border-none {
+        background-color: #eb0000;
+        color: #fff !important;
+        padding: 6px 15px;
+        border-radius: 50px;
+        box-shadow: 0 0 6px 2px #d12020;
+        outline: 2px solid #ffffff;
+        font-size: 11px;
+        outline-offset: -5px;
+        text-transform: capitalize;
+        background: linear-gradient(45deg, #d12020, #d12020);
+        letter-spacing: 1px;
+        transition: all 0.5s;
+    }
+    
+    .border-none:hover {
+        box-shadow: 0 0 25px 2px #ffffff;
+    }
+    
+    .tournaments {
+        font-size: 18px !important;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    .love-success {
+        font-weight: 600;
+        font-size: 13px;
+        color: green;
+        animation: live-kz 1s infinite linear;
+        transition: all 0.5;
+    }
+    
+    .dc {
+        color: #d12020;
+    }
+    
+    @keyframes live-kz {
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .overfowl {
+        overflow-y: scroll;
+        /* position: fixed; */
+        height: 100% !important;
+        width: 100%;
+    }
+    
+    .background-img {
+        background-image: url("../img/07.hdtyr.webp");
+        padding: 30px 0px;
+        background-size: cover;
+        height: 150%;
+        background-position: center;
+    }
+    
+    .logo-true span {
+        font-size: 25px;
+    }
+    
+    .rkludo-best {
+        position: absolute;
+        bottom: -61%;
+        left: 25%;
+    }
+    /* .login-page */
+    
+    .img-logo img {
+        max-width: 70px;
+    }
+    
+    .informetion p {
+        font-size: 10px;
+        margin: 40px 20px;
+    }
+    
+    .form-bg {
+        background-color: #2284775c;
+        border: 1px solid #828282;
+        border-radius: 5px;
+        padding: 40px 10px;
+        width: 90%;
+    }
+    
+    form a {
+        background-color: #208074 !important;
+        border: none;
+        border-radius: 5px !important;
+        color: #fff;
+        /* font-size: 1em; */
+        font-weight: 500 !important;
+        height: 48px;
+        letter-spacing: 1px;
+        padding: 10px 0px !important;
+        text-transform: capitalize !important;
+        margin-top: 20px;
+        display: block !important;
+    }
+    
+    .bg-color {
+        background-color: #7bc2ba;
+        padding: 20px !important;
+        border-radius: 10px;
+    }
+    
+    .relative span {
+        position: absolute;
+        bottom: 71%;
+        left: 8%;
+        /* position: fixed; */
+    }
+    
+    .text p {
+        font-size: 13px;
+    }
+    
+    .text-center {
+        margin-top: 0px !important;
+    }
+    /* ludo-ruls */
+    
+    .home-bg {
+        background-color: #d0d4d4;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: .875rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        padding: 0.56rem 1.13rem;
+        border: 1px solid #000;
+    }
+    
+    .list .number {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    
+    @media (max-width:991px) {}
+    
+    @media (max-width:767px) {}
+    
+    @media (max-width:576px) {
+        .background-img {
+            display: none !important;
+        }
+        .mt-5 {
+            margin-top: 10px !important;
+        }
+    }
+    
+    @media (min-width:577px) {
+        /* home-page */
+        .overfowl {
+            overflow: scroll !important;
+            position: fixed;
+            height: 810px;
+            width: 31%;
+        }
+        .flex-1 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+            position: fixed;
+            width: 29%;
+            z-index: 99;
+            top: 0;
+            border-radius: 10px;
+        }
+        .mt {
+            margin-top: 50px !important;
+        }
+        .withorawal p {
+            border: 1px solid red;
+            padding: 10px 10px;
+            color: red;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500 !important;
+        }
+        .border-none {
+            background-color: #eb0000;
+            color: #fff !important;
+            padding: 6px 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px 0px #d12020;
+            outline: 2px solid #ffffff;
+            font-size: 16px;
+            outline-offset: -5px;
+            text-transform: capitalize;
+            background: linear-gradient(45deg, #d12020, #d12020);
+            letter-spacing: 1px;
+            transition: all 0.5s;
+        }
+        .background-img {
+            background-image: url("../img/07.hdtyr.webp");
+            padding: 30px 0px;
+            background-size: cover;
+            height: 150%;
+            background-position: center;
+        }
+        /* home-page */
+    }
+    
+    @media (min-width:768px) {}
+    
+    @media (min-width:992px) {}
+    
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(138, 136, 136, 0.883);
+        z-index: 100;
+        padding-top: 60px;
+    }
+    
+    #navbar.show {
+        display: block;
+    }
+    
+    #toggle-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 101;
+        background-color: #3c3b3b;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #toggle-btn:hover {
+        background-color: #1d1d1d;
+    }
+    
+    #navbar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #navbar ul li {
+        margin: 10px 0;
+        /* Gap between links */
+    }
+    
+    #navbar ul li a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    #navbar ul li a:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+
+<body>
+    <button id="toggle-btn">☰</button>
+    <div id="navbar">
+        <ul>
+            <li><a href="{% url 'ludoapp:demo' %}">My Profile</a></li>
+            <li><a href="#">Win cash</a></li>
+            <li><a href="#">My wallet</a></li>
+            <li><a href="#">Game History</a></li>
+            <li><a href="#">Transaction History</a></li>
+            <li><a href="#">Refer and Earn</a></li>
+            <li><a href="#">Refer History</a></li>
+            <li><a href="#">Notification</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">All Policy</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class=" container-fluid ">
+            <div class="row ">
+                <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <div class="flex-1 py-2 px-1 ">
+                        <aside class="logo ">
+                            <a href="# "><img src="{% static 'img/ludo logo 1.png' %}" alt="rkludologo.webp " class="w-100 "></a>
+                        </aside>
+                        <div class="rk-ludo ">
+                            <a type="text " href="{% url 'ludoapp:indexlogin' %}">login</a>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 overfowl ">
+                        <div class="withorawal mt ">
+                            <p>आप 2 लाख की GAME खेल सकते हो. 1 मिनट से कम समय में WITHDRAWAL ले. धन्यवाद, हेल्पलाइन नंबर 9983882438
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 ">
+                            <h4 class="m-0 tournaments ">Tournaments</h4>
+                            <a href="https://www.youtube.com/@RkLudo.in82 " class="border-none " type="text ">
+                                <img src="{% static 'img/youtube.png' %}" alt="sdch sjdcbugcdc "> You tube
+                            </a>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 ">
+                                <div class="text-center ">
+                                    <a class="mt-3 " href="{% url 'ludoapp:battle' %}"><span class="love-success d-block text-right ">◉
+                                            LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                        LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="text-center ">
+                                    <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                            LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                        LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="text-center ">
+                                    <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                            LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <a class="mt-3 " href="# "><span class="love-success dc d-block text-right ">◉
+                                        LIVE</span><img src="{% static 'img/manual.png' %}" width="92% "></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <div class="background-img text-center ">
+                        <img src="{% static 'img/logo.webp' %}" width="32% ">
+                        <div class="logo-true mt-3 ">
+                            <img src="{% static 'img/rkludologo.webp' %}" alt=" " width="20% ">
+                            <span>WIN REAL CASH</span>
+                        </div>
+                        <div class="text-center ">
+                            <span class="rkludo-best ">For best experience, open rkludo.in on <img src="{% static 'img/chrome.png' %}"
+                                    alt=" " width="33px " class=" ">
+                                chrome
+                                mobile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<!--<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+            } else {
+                navbar.classList.add('show');
+            }
+        });
+    </script>
+    </body>
+
+    </html> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rk-ludo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        display: inline-block;
+        text-decoration: none !important;
+    }
+    
+    .flex-1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+        position: sticky;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    .logo img {
+        width: 50%;
+        margin-left: 10px
+    }
+    
+    .rk-ludo a {
+        padding: 6px 25px;
+        border: 1px solid #023441;
+        font-size: 16px;
+        transition: all 0.5s;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    
+    .rk-ludo a:hover {
+        background-color: #023441;
+        color: #fff;
+    }
+    
+    .withorawal p {
+        border: 1px solid red;
+        padding: 10px 10px;
+        color: red;
+        font-size: 13px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500 !important;
+    }
+    
+    .border-none {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .border-none img {
+        width: 19px !important;
+    }
+    
+    .border-none {
+        background-color: #eb0000;
+        color: #fff !important;
+        padding: 6px 15px;
+        border-radius: 50px;
+        box-shadow: 0 0 6px 2px #d12020;
+        outline: 2px solid #ffffff;
+        font-size: 11px;
+        outline-offset: -5px;
+        text-transform: capitalize;
+        background: linear-gradient(45deg, #d12020, #d12020);
+        letter-spacing: 1px;
+        transition: all 0.5s;
+    }
+    
+    .border-none:hover {
+        box-shadow: 0 0 25px 2px #ffffff;
+    }
+    
+    .tournaments {
+        font-size: 18px !important;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    .love-success {
+        font-weight: 600;
+        font-size: 13px;
+        color: red;
+        animation: live-kz 1s infinite linear;
+        transition: all 0.5;
+    }
+    
+    .dc {
+        color: #d12020;
+    }
+    
+    @keyframes live-kz {
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .overfowl {
+        overflow-y: scroll;
+        /* position: fixed; */
+        height: 100% !important;
+        width: 100%;
+    }
+    
+    .background-img {
+        background-image: url("../img/07.hdtyr.webp");
+        padding: 30px 0px;
+        background-size: cover;
+        height: 150%;
+        background-position: center;
+    }
+    
+    .logo-true span {
+        font-size: 25px;
+    }
+    
+    .rkludo-best {
+        position: absolute;
+        bottom: -61%;
+        left: 25%;
+    }
+    /* .login-page */
+    
+    .img-logo img {
+        max-width: 70px;
+    }
+    
+    .informetion p {
+        font-size: 10px;
+        margin: 40px 20px;
+    }
+    
+    .form-bg {
+        background-color: #2284775c;
+        border: 1px solid #828282;
+        border-radius: 5px;
+        padding: 40px 10px;
+        width: 90%;
+    }
+    
+    form a {
+        background-color: #208074 !important;
+        border: none;
+        border-radius: 5px !important;
+        color: #fff;
+        /* font-size: 1em; */
+        font-weight: 500 !important;
+        height: 48px;
+        letter-spacing: 1px;
+        padding: 10px 0px !important;
+        text-transform: capitalize !important;
+        margin-top: 20px;
+        display: block !important;
+    }
+    
+    .bg-color {
+        background-color: #7bc2ba;
+        padding: 20px !important;
+        border-radius: 10px;
+    }
+    
+    .relative span {
+        position: absolute;
+        bottom: 71%;
+        left: 8%;
+        /* position: fixed; */
+    }
+    
+    .text p {
+        font-size: 13px;
+    }
+    
+    .text-center {
+        margin-top: 0px !important;
+    }
+    /* ludo-ruls */
+    
+    .home-bg {
+        background-color: #d0d4d4;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: .875rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        padding: 0.56rem 1.13rem;
+        border: 1px solid #000;
+    }
+    
+    .list .number {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    
+    @media (max-width:991px) {}
+    
+    @media (max-width:767px) {}
+    
+    @media (max-width:576px) {
+        .background-img {
+            display: none !important;
+        }
+        .mt-5 {
+            margin-top: 10px !important;
+        }
+    }
+    
+    @media (min-width:577px) {
+        /* home-page */
+        .overfowl {
+            overflow: scroll !important;
+            position: fixed;
+            height: 810px;
+            /* width: 31%; */
+        }
+        .flex-1 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+            position: fixed;
+            width: 29%;
+            z-index: 99;
+            top: 0;
+            border-radius: 10px;
+        }
+        .mt {
+            margin-top: 50px !important;
+        }
+        .withorawal p {
+            border: 1px solid red;
+            padding: 10px 10px;
+            color: red;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500 !important;
+        }
+        .border-none {
+            background-color: #eb0000;
+            color: #fff !important;
+            padding: 6px 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px 0px #d12020;
+            outline: 2px solid #ffffff;
+            font-size: 16px;
+            outline-offset: -5px;
+            text-transform: capitalize;
+            background: linear-gradient(45deg, #d12020, #d12020);
+            letter-spacing: 1px;
+            transition: all 0.5s;
+        }
+        .background-img {
+            background-image: url("../img/07.hdtyr.webp");
+            padding: 30px 0px;
+            background-size: cover;
+            height: 150%;
+            background-position: center;
+        }
+        /* home-page */
+    }
+    
+    @media (min-width:768px) {}
+    
+    @media (min-width:992px) {}
+    
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(138, 136, 136, 0.883);
+        z-index: 100;
+        padding-top: 60px;
+    }
+    
+    #navbar.show {
+        display: block;
+    }
+    
+    #toggle-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 101;
+        background-color: #3c3b3b;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #toggle-btn:hover {
+        background-color: #1d1d1d;
+    }
+    
+    #navbar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #navbar ul li {
+        margin: 10px 0;
+        /* Gap between links */
+    }
+    
+    #navbar ul li a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    #navbar ul li a:hover {
+        background-color: #f0f0f0;
+    }
+    /* Navbar */
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+        overflow: hidden;
+        background-color: #d60505ce;
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    .topnav a:hover {
+        background-color: #507288;
+        color: black;
+    }
+    /*.topnav a.active {*/
+    /* background-color: #507288; */
+    /* color: white; }*/
+    
+    .topnav .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    /* Navbar end */
+</style>
+
+<body>
+    <!-- <button id="toggle-btn">☰</button>
+    <div id="navbar">
+        <ul>
+            <li><a href="{% url 'ludoapp:profile' %}">My Profile</a></li>
+            <li><a href="#">Win cash</a></li>
+            <li><a href="#">My wallet</a></li>
+            <li><a href="#">Game History</a></li>
+            <li><a href="#">Transaction History</a></li>
+            <li><a href="#">Refer and Earn</a></li>
+            <li><a href="#">Refer History</a></li>
+            <li><a href="#">Notification</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">All Policy</a></li>
+        </ul>
+    </div> -->
+
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav">
+        <!-- <a></a> -->
+        <a href="{% url 'ludoapp:demo' %}" class="active">My profile</a>
+        <a href="#{% url 'ludoapp:landing' %}">Win cash</a>
+        <a href="{% url 'ludoapp:wallet' %}">My Wallet</a>
+        <a href="#about">Game History</a>
+        <a href="#home" class="active">Transaction History</a>
+        <a href="{% url 'ludoapp:refer' %}">Refer & Earn</a>
+        <a href="#contact">Refer History</a>
+        <a href="#about">Notification</a>
+        <a href="{% url 'ludoapp:support1' %}">Support</a>
+        <a href="{% url 'ludoapp:policy' %}">All Policies</a>
+        <a href=" javascript:void(0); " class="icon " onclick="myFunction() ">
+            <i class="fa fa-bars "></i>
+        </a>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav ");
+            if (x.className === "topnav ") {
+                x.className += " responsive ";
+            } else {
+                x.className = "topnav ";
+            }
+        }
+    </script>
+    <!-- Navbar end -->
+    <section>
+        <div class=" container-fluid ">
+            <div class="row ">
+                <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <!-- <div class="flex-1 py-2 px-1 ">
+                        <aside class="logo ">
+                            <a href="# "><img src="{% static 'img/ludo logo 1.png' %} " alt="rkludologo.webp " class="w-100 "></a>
+                        </aside>
+                        <div class="rk-ludo ">
+                            <a type="text " href="{% url 'ludoapp:indexlogin' %} ">login</a>
+                        </div>
+                    </div> -->
+                    <div class="px-4 py-3 overfowl ">
+                        <div class="withorawal mt ">
+                            <p>आप 2 लाख की GAME खेल सकते हो. 1 मिनट से कम समय में WITHDRAWAL ले. धन्यवाद, हेल्पलाइन नंबर 9983882438
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 ">
+                            <h2>Tournaments</h2>
+                            <a href="https://www.youtube.com/@RkLudo.in82 " class="border-none " type="text ">
+                                <img src="{% static 'img/youtube.png' %} " alt="sdch sjdcbugcdc "> You tube
+                            </a>
+                        </div>
+                        <div class="row ">
+                            <div class="col-3 ">
+                                <div class="text-center ">
+                                    <a class="mt-3 " href="{% url 'ludoapp:battle' %}"><span class="love-success d-block text-right ">◉
+                                            LIVE</span><img src="{% static 'img/ludo1.png' %} " width="92% "></a>
+                                </div>
+                            </div>
+                            <div class="col-3 ">
+                                <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                        COMMING SOON</span><img src="{% static 'img/ludo2.png' %} " width="92% "></a>
+                            </div>
+                            <div class="col-3 ">
+                                <div class="text-center ">
+                                    <a class="mt-3 " href="# "><span class="love-success d-block text-right ">◉
+                                            COMMING SOON</span><img src="{% static 'img/ludo3.png' %} " width="92% "></a>
+                                </div>
+                            </div>
+                            <div class="col-3 ">
+                                <a class="mt-3 " href="{% url 'ludoapp:support1' %}"><span class="love-success d-block text-right ">◉
+                                        LIVE</span><img src="{% static 'img/ludo4.png' %} " width="92% "></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <!-- <div class="background-img text-center ">
+                        <img src="{% static 'img/logo.webp' %} " width="32% ">
+                        <div class="logo-true mt-3 ">
+                            <img src="{% static 'img/rkludologo.webp' %} " alt=" " width="20% ">
+                            <span>WIN REAL CASH</span>
+                        </div>
+                        <div class="text-center ">
+                            <span class="rkludo-best ">For best experience, open rkludo.in on <img src="{% static 'img/chrome.png' %} "
+                                    alt=" " width="33px " class=" ">
+                                chrome
+                                mobile</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %} "></script>
+    <!-- <link rel="stylesheet " href="{% static 'css/style.css' %} "> -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %} "></script>
+
+    <script src="{% static 'js/jquery-3.7.1.min.js' %} "></script>
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+            } else {
+                navbar.classList.add('show');
+            }
+        });
+    </script>
+</body>
+
+</html>

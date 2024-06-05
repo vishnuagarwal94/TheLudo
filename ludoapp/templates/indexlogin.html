@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rk-ludo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        display: inline-block;
+        text-decoration: none !important;
+    }
+    
+    .flex-1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+        position: sticky;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    .logo img {
+        width: 50%;
+        margin-left: 10px
+    }
+    
+    .rk-ludo a {
+        padding: 6px 25px;
+        border: 1px solid #023441;
+        font-size: 16px;
+        transition: all 0.5s;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    
+    .rk-ludo a:hover {
+        background-color: #023441;
+        color: #fff;
+    }
+    
+    .withorawal p {
+        border: 1px solid red;
+        padding: 10px 10px;
+        color: red;
+        font-size: 13px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500 !important;
+    }
+    
+    .border-none {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .border-none img {
+        width: 19px !important;
+    }
+    
+    .border-none {
+        background-color: #eb0000;
+        color: #fff !important;
+        padding: 6px 15px;
+        border-radius: 50px;
+        box-shadow: 0 0 6px 2px #d12020;
+        outline: 2px solid #ffffff;
+        font-size: 11px;
+        outline-offset: -5px;
+        text-transform: capitalize;
+        background: linear-gradient(45deg, #d12020, #d12020);
+        letter-spacing: 1px;
+        transition: all 0.5s;
+    }
+    
+    .border-none:hover {
+        box-shadow: 0 0 25px 2px #ffffff;
+    }
+    
+    .tournaments {
+        font-size: 18px !important;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    .love-success {
+        font-weight: 600;
+        font-size: 13px;
+        color: green;
+        animation: live-kz 1s infinite linear;
+        transition: all 0.5;
+    }
+    
+    .dc {
+        color: #d12020;
+    }
+    
+    @keyframes live-kz {
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .overfowl {
+        overflow-y: scroll;
+        /* position: fixed; */
+        height: 100% !important;
+        width: 100%;
+    }
+    
+    .background-img {
+        background-image: url("../img/07.hdtyr.webp");
+        padding: 30px 0px;
+        background-size: cover;
+        height: 150%;
+        background-position: center;
+    }
+    
+    .logo-true span {
+        font-size: 25px;
+    }
+    
+    .rkludo-best {
+        position: absolute;
+        bottom: -61%;
+        left: 25%;
+    }
+    /* .login-page */
+    
+    .img-logo img {
+        max-width: 70px;
+    }
+    
+    .informetion p {
+        font-size: 10px;
+        margin: 40px 20px;
+    }
+    
+    .form-bg {
+        background-color: #2284775c;
+        border: 1px solid #828282;
+        border-radius: 5px;
+        padding: 40px 10px;
+        width: 90%;
+    }
+    
+    form a {
+        background-color: #208074 !important;
+        border: none;
+        border-radius: 5px !important;
+        color: #fff;
+        /* font-size: 1em; */
+        font-weight: 500 !important;
+        height: 48px;
+        letter-spacing: 1px;
+        padding: 10px 0px !important;
+        text-transform: capitalize !important;
+        margin-top: 20px;
+        display: block !important;
+    }
+    
+    .bg-color {
+        background-color: #7bc2ba;
+        padding: 20px !important;
+        border-radius: 10px;
+    }
+    
+    .relative span {
+        position: absolute;
+        bottom: 71%;
+        left: 8%;
+        /* position: fixed; */
+    }
+    
+    .text p {
+        font-size: 13px;
+    }
+    
+    .text-center {
+        margin-top: 0px !important;
+    }
+    /* ludo-ruls */
+    
+    .home-bg {
+        background-color: #d0d4d4;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: .875rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        padding: 0.56rem 1.13rem;
+        border: 1px solid #000;
+    }
+    
+    .list .number {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    
+    @media (max-width:991px) {}
+    
+    @media (max-width:767px) {}
+    
+    @media (max-width:576px) {
+        .background-img {
+            display: none !important;
+        }
+        .mt-5 {
+            margin-top: 10px !important;
+        }
+    }
+    
+    @media (min-width:577px) {
+        /* home-page */
+        .overfowl {
+            overflow: scroll !important;
+            position: fixed;
+            height: 810px;
+            width: 31%;
+        }
+        .flex-1 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+            position: fixed;
+            width: 29%;
+            z-index: 99;
+            top: 0;
+            border-radius: 10px;
+        }
+        .mt {
+            margin-top: 50px !important;
+        }
+        .withorawal p {
+            border: 1px solid red;
+            padding: 10px 10px;
+            color: red;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500 !important;
+        }
+        .border-none {
+            background-color: #eb0000;
+            color: #fff !important;
+            padding: 6px 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px 0px #d12020;
+            outline: 2px solid #ffffff;
+            font-size: 16px;
+            outline-offset: -5px;
+            text-transform: capitalize;
+            background: linear-gradient(45deg, #d12020, #d12020);
+            letter-spacing: 1px;
+            transition: all 0.5s;
+        }
+        .background-img {
+            background-image: url("../img/07.hdtyr.webp");
+            padding: 30px 0px;
+            background-size: cover;
+            height: 150%;
+            background-position: center;
+        }
+        /* home-page */
+    }
+    
+    @media (min-width:768px) {}
+    
+    @media (min-width:992px) {}
+</style>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="flex-1 py-2 px-1">
+                        <aside class="logo">
+                            <a href="#"><img src="{% static 'img/ludo logo 1.png' %}" alt="rkludologo.webp" class="w-100"></a>
+                        </aside>
+                        <div class="rk-ludo">
+                            <a type="text" href="#">login</a>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 overfowl">
+                        <div class="text-center mt-5">
+                            <img src="{% static 'img/Rk-LUDO-min 1.png' %}" alt="" style="width: 100px;">
+                        </div>
+                        <div class="">
+                            <div class="mb-3 ml-3 bg-color">
+                                <h2>Login Here !</h2>
+                                <p>Fill your infomation and complete your acoount</p>
+                                <form action="#" method="post">
+                                    <div class="mb-3 relative">
+                                        <input type="text" class="form-control pl-3" placeholder="Enter Your Mobile" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <!-- <span>+91</span> -->
+                                        <a class="btn d-block primary" type="submit" id="button-addon2" href="{% url 'ludoapp:landing' %}">Send OTP</a>
+                                    </div>
+                                </form>
+                            </div>
+
+
+
+                            <div class="text">
+                                <p>By continuing I agree that DIVY WEBTECH PRIVATE LIMITED may store and process my data in accordance with the <a href="#">Terms of Use,Privacy Policy</a> and that I am 18 years or older. I am not playing from Assam, Odisha,
+                                    Nagaland, Sikkim, Meghalaya, Andhra Pradesh, or Telangana.</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="background-img text-center">
+                        <img src="{% static 'img/logo.webp' %}" width="32%">
+                        <div class="logo-true mt-3">
+                            <img src="{% static 'img/rkludologo.webp' %}" alt="" width="20%">
+                            <span>WIN REAL CASH</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="rkludo-best">For best experience, open rkludo.in on <img src="{% static 'img/chrome.png' %}"
+                                    alt="" width="33px" class="">
+                                chrome
+                                mobile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+</body>
+
+</html>

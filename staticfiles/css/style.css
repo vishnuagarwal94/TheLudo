@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.flex-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+    position: sticky;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 50%;
+    margin-left:10px
+}
+
+.rk-ludo a {
+    padding: 6px 25px;
+    border: 1px solid #023441;
+    font-size: 16px;
+    transition: all 0.5s;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    background-color: transparent;
+
+
+}
+
+.rk-ludo a:hover {
+    background-color: #023441;
+    color: #fff;
+
+}
+
+.withorawal p {
+    border: 1px solid red;
+    padding: 10px 10px;
+    color: red;
+    font-size: 13px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500 !important;
+}
+
+.border-none {
+    border: none;
+    background-color: transparent;
+}
+
+.border-none img {
+    width: 19px !important;
+}
+
+.border-none {
+    background-color: #eb0000;
+    color: #fff !important;
+    padding: 6px 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px 2px #d12020;
+    outline: 2px solid #ffffff;
+    font-size: 11px;
+    outline-offset: -5px;
+    text-transform: capitalize;
+    background: linear-gradient(45deg, #d12020, #d12020);
+    letter-spacing: 1px;
+    transition: all 0.5s;
+
+}
+
+.border-none:hover {
+    box-shadow: 0 0 25px 2px #ffffff;
+}
+
+.tournaments {
+    font-size: 18px !important;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.love-success {
+    font-weight: 600;
+    font-size: 13px;
+    color: green;
+    animation: live-kz 1s infinite linear;
+    transition: all 0.5;
+
+}
+
+.dc {
+    color: #d12020;
+}
+
+@keyframes live-kz {
+
+    50% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.overfowl {
+    overflow-y: scroll;
+     /* position: fixed; */
+   height: 100% !important;
+    width: 100%;
+}
+
+.background-img {
+    background-image: url("../img/07.hdtyr.webp");
+    padding: 30px 0px;
+    background-size: cover;
+    height: 150%;
+    background-position: center;
+}
+
+
+
+.logo-true span {
+
+    font-size: 25px;
+
+}
+
+.rkludo-best {
+    position: absolute;
+    bottom: -61%;
+    left: 25%;
+}
+
+
+
+/* .login-page */
+.img-logo img{
+    max-width: 70px;
+}
+
+.informetion p{
+    font-size: 10px;
+    margin: 40px 20px;
+}
+
+.form-bg{
+    background-color: #2284775c;
+    border: 1px solid #828282;
+    border-radius: 5px;
+    padding: 40px 10px;
+    width: 90%;
+}
+
+
+form a{
+    background-color: #208074 !important;
+    border: none;
+    border-radius: 5px !important;
+    color: #fff;
+    /* font-size: 1em; */
+    font-weight: 500 !important;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 10px 0px !important;
+    text-transform: capitalize !important;
+    margin-top: 20px;
+    display: block !important;
+}
+.bg-color{
+    background-color: #7bc2ba;
+    padding:20px !important;
+    border-radius: 10px;
+}
+
+.relative span{
+    position: absolute;
+    bottom: 71%;
+    left: 8%;
+    /* position: fixed; */
+}
+
+.text p{
+    font-size: 13px;
+}
+.text-center {
+    margin-top: 0px !important;
+}
+
+/* ludo-ruls */
+.home-bg{
+    background-color: #d0d4d4;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .875rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0.56rem 1.13rem;
+    border: 1px solid #000;
+}
+
+.list .number{
+    font-size: 12px;
+    line-height: 22px;
+}
+
+
+
+
+@media (max-width:991px) {
+
+    
+}
+
+@media (max-width:767px){
+
+}
+
+@media (max-width:576px) {
+
+    .background-img{
+        display: none !important;
+      }
+    .mt-5{
+        margin-top: 10px !important;
+    }    
+    
+  }
+
+
+  @media (min-width:577px) {
+
+    /* home-page */
+    
+    .overfowl {
+        overflow: scroll !important;
+        position: fixed;
+        height: 810px;
+        width: 31%;
+    }
+
+
+
+    .flex-1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        box-shadow: 0 .125rem .25rem rgb(0 0 0/8%) !important;
+        position: fixed;
+        width: 29%;
+        z-index: 99;
+        top: 0;
+        border-radius: 10px;
+    }
+    .mt{
+        margin-top: 50px !important;
+    }
+    .withorawal p {
+        border: 1px solid red;
+        padding: 10px 10px;
+        color: red;
+        font-size: 16px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500 !important;
+    }
+
+   .border-none{
+    background-color: #eb0000;
+    color: #fff !important;
+    padding: 6px 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 25px 0px #d12020;
+    outline: 2px solid #ffffff;
+    font-size: 16px;
+    outline-offset: -5px;
+    text-transform: capitalize;
+    background: linear-gradient(45deg, #d12020, #d12020);
+    letter-spacing: 1px;
+    transition: all 0.5s;
+   }
+
+
+   .background-img {
+    background-image: url("../img/07.hdtyr.webp");
+    padding: 30px 0px;
+
+    background-size: cover;
+    height: 150%;
+    background-position: center;
+}
+
+
+  /* home-page */
+
+    }
+
+  
+  @media (min-width:768px){
+  
+  }
+  
+  @media (min-width:992px) {
+  
+      
+    }

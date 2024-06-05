@@ -1,0 +1,43 @@
+<!-- profile_edit.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+
+<body>
+    <h1>Edit Profile</h1>
+
+    <form method="POST" action="{% url 'profile_edit' %}">
+        {% csrf_token %}
+
+        <!-- Display current profile details -->
+        <!-- <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ user.username }}" disabled><br><br> -->
+
+        <label for="name">Name:</label>
+        <input type="text" id="player_name" name="player_name" value="{{ user.player_name }}"><br><br>
+
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your mobile number" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="player_email" name="player_email" value="{{ user.player_email }}"><br><br>
+
+        <label for="aadhar_card_front">Aadhar Card:</label>
+        <input type="file" id="aadhar_card_front" name="aadhar_card_front" accept="image/*"><br><br>
+
+        <label for="aadhar_card_back">Aadhar Card:</label>
+        <input type="file" id="aadhar_card_back" name="aadhar_card_back" accept="image/*"><br><br>
+        <!-- <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}"><br><br> -->
+
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+
+</html>
