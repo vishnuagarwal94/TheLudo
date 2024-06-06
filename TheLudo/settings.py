@@ -84,7 +84,7 @@ DATABASES = {
         "NAME": 'ludogame',
         'USER': 'root',
         'PASSWORD': 'Ag@r2453',
-        'HOST': 'localhost',  # or your MySQL server's hostname
+        'HOST': '',  # or your MySQL server's hostname
         'PORT': '3306',
     }
 }
